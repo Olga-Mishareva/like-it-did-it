@@ -1,6 +1,22 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { FC } from "react";
+import "@/styles/globals.css";
+import Head from "next/head";
+import type { AppProps } from "next/app";
+import { Inter } from "next/font/google";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const inter = Inter({ subsets: ["latin"] });
+
+const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <Head>
+        <title>Liked it - Did it</title>
+      </Head>
+      <div className={inter.className}>
+        <Component {...pageProps} />
+      </div>
+    </>
+  );
+};
+
+export default App;
