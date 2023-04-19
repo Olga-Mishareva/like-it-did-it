@@ -1,0 +1,13 @@
+.cardList {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.card {
+  margin: 20px auto 0;
+  width: 50vw;
+  padding: 10px;
+  border: 1px solid var(--font-color);
+  border-radius: 10px;
+}
