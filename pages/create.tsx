@@ -1,7 +1,8 @@
 import { FC } from "react";
+import type { NextPage } from "next";
 import FormPage from "./components/FormPage/FormPage";
 
-const CreatePage: FC = () => {
+const CreatePage: NextPage = () => {
   return <FormPage />;
 };
 
