@@ -1,13 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
 .cardList {
+  padding: 0;
   list-style: none;
+  width: 100%;
   margin: 0;
-  padding: 10px;
 }
 
 .card {
-  margin: 20px auto 0;
-  width: 50vw;
-  padding: 10px;
-  border: 1px solid var(--font-color);
+  margin: 2rem auto 0;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--font-color);
   border-radius: 10px;
+}
+
+.link {
+  text-decoration: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 2px solid var(--font-color);
+  border-radius: 6px;
+  color: var(--font-color);
 }
