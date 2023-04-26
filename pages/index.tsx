@@ -1,9 +1,17 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import type { NextPage } from "next";
-import ListPage from "./components/ListPage/ListPage";
+import { useRouter } from "next/router";
+
+import ListPage from "../components/ListPage/ListPage";
 
 const HomePage: NextPage = () => {
-  return <ListPage></ListPage>;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/list/likedit");
+  }, []);
+
+  return <></>;
 };
 
 export default HomePage;
