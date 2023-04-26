@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 
-import Layout from "./components/Layout/Layout";
+import Layout from "../components/Layout/Layout";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter-font" });
 
