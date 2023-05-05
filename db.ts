@@ -1,6 +1,7 @@
 export const db = [
   {
-    date: new Date().toISOString().split("T")[0],
+    // date: new Date().toISOString().split("T")[0],
+    date: "2023-04-19",
     status: "liked",
     dayEvents: ["fdsgsg", "fjhjdshgh", "sdlfjgsjdf"],
     userId: "2834-4676",
@@ -8,7 +9,31 @@ export const db = [
     userEmail: "email@om.com",
   },
   {
-    date: new Date().toISOString().split("T")[0],
+    date: "2023-04-18",
+    status: "did",
+    dayEvents: ["fdsgsg", "fjhjdshgh", "sdlfjgsjdf", "ldyfjgfgu"],
+    userId: "3948-4856",
+    userName: "rr",
+    userEmail: "email@rr.com",
+  },
+  {
+    date: "2023-04-17",
+    status: "did",
+    dayEvents: ["fdsgsg", "fjhjdshgh", "sdlfjgsjdf", "ldyfjgfgu"],
+    userId: "3948-4856",
+    userName: "rr",
+    userEmail: "email@rr.com",
+  },
+  {
+    date: "2023-04-16",
+    status: "did",
+    dayEvents: ["fdsgsg", "fjhjdshgh", "sdlfjgsjdf", "ldyfjgfgu"],
+    userId: "3948-4856",
+    userName: "rr",
+    userEmail: "email@rr.com",
+  },
+  {
+    date: "2023-04-15",
     status: "did",
     dayEvents: ["fdsgsg", "fjhjdshgh", "sdlfjgsjdf", "ldyfjgfgu"],
     userId: "3948-4856",

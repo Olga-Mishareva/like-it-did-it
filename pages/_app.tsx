@@ -1,21 +1,33 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import "@/styles/globals.css";
 import Head from "next/head";
+import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import Layout from "../components/Layout/Layout";
 
-const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+const inter = Inter({ subsets: ["latin"], variable: "--inter-font" });
+
+// export type PageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+//   page: ReactNode;
+// };
+
+// export type AppPropsWithLayout = AppProps & {
+//   page: React.ReactNode;
+//   // pageProps: AppProps;
+// };
+
+const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <>
+    <div className={inter.className}>
       <Head>
         <title>Liked it - Did it</title>
       </Head>
-      <div className={inter.className}>
+      <Layout>
         <Component {...pageProps} />
-      </div>
-    </>
+      </Layout>
+    </div>
   );
 };
 

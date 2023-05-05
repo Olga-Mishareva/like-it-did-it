@@ -1,8 +1,17 @@
-import { FC } from "react";
-import ListPage from "./components/ListPage/ListPage";
+import { FC, useEffect } from "react";
+import type { NextPage } from "next";
+import { useRouter } from "next/router";
 
-const HomePage: FC = () => {
-  return <ListPage></ListPage>;
+import ListPage from "../components/ListPage/ListPage";
+
+const HomePage: NextPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/list/liked");
+  }, []);
+
+  return <></>;
 };
 
 export default HomePage;

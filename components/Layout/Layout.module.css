@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 90px auto 70px;
+  height: 100vh;
+  position: relative;
+}
+
+.header {
+  border-bottom: 1px solid var(--font-color);
+}
+
+.main {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.main::-webkit-scrollbar {
+  width: 0;
+}
+
+.footer {
+  border-top: 1px solid var(--font-color);
+}
