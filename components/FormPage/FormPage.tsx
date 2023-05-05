@@ -15,7 +15,9 @@ const FormPage: FC<pathProp> = ({ path }) => {
         {path === "liked" ? "I liked it" : "I did it"}
       </h2>
       <div className={styles.container}>
-        <p className={styles.date}></p>
+        {/* <p className={styles.date}>{new Date().toISOString().split("T")[0]}</p> */}
+        {/* <p className={styles.date}>{new Date().toUTCString().split(" ", 4)}</p> */}
+        <p className={styles.date}>{new Date().toUTCString().slice(0, -13)}</p>
         <ol className={styles.eventList}></ol>
       </div>
       <form className={styles.form} id="">
