@@ -1,19 +1,19 @@
 import { FC } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import { db } from "@/db";
 import styles from "./ListPage.module.css";
 import { Card } from "../../helpers/intefaces";
 
-const ListPage: FC = () => {
-  const router = useRouter();
+type pathProp = {
+  path: string;
+};
 
-  console.log(router.pathname);
+const ListPage: FC<pathProp> = ({ path }) => {
   return (
     <div className={styles.wrapper}>
-      <Link className={styles.link} href="/create">
-        {router.pathname === "/list/likedit" ? "I liked it" : "I did it"}
+      <Link className={styles.link} href={`/create/${path}`}>
+        {path === "liked" ? "I liked it" : "I did it"}
       </Link>
       <ul className={styles.cardList}>
         {db.map((item: Card, i) => (

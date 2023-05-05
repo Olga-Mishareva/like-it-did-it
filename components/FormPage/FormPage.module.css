@@ -38,7 +38,7 @@
 .buttonsContainer {
   position: fixed;
   left: 1.5rem;
-  bottom: 3.5rem;
+  bottom: calc(70px + 3.5rem);
   width: calc(100% - 3rem);
   display: flex;
   justify-content: space-between;

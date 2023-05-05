@@ -3,10 +3,17 @@ import Link from "next/link";
 
 import styles from "./FormPage.module.css";
 
-const FormPage: FC = () => {
+type pathProp = {
+  path: string;
+};
+
+const FormPage: FC<pathProp> = ({ path }) => {
+  console.log(path);
   return (
     <div className={styles.formWrapper}>
-      <h2 className={styles.formTitle}>I liked it</h2>
+      <h2 className={styles.formTitle}>
+        {path === "liked" ? "I liked it" : "I did it"}
+      </h2>
       <div className={styles.container}>
         <p className={styles.date}></p>
         <ol className={styles.eventList}></ol>
@@ -16,7 +23,7 @@ const FormPage: FC = () => {
           className={styles.input}
           type="text"
           aria-label="Event"
-          placeholder="I liked..."
+          placeholder={path === "liked" ? "Liked it..." : "Did it..."}
         />
         <div className={styles.buttonsContainer}>
           <Link className={styles.backLink} href="/">

@@ -8,7 +8,7 @@ const HomePage: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/list/likedit");
+    router.push("/list/liked");
   }, []);
 
   return <></>;
