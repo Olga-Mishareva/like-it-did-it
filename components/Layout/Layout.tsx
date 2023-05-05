@@ -1,4 +1,6 @@
 import { FC } from "react";
+import Link from "next/link";
+
 import styles from "./Layout.module.css";
 // import { AppPropsWithLayout } from "../../_app";
 
@@ -11,7 +13,18 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className={styles.wrapper}>
       <header className={styles.header}></header>
       <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/list/liked">Liked it</Link>
+            </li>
+            <li>
+              <Link href="/list/did">Did it</Link>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </div>
   );
 };

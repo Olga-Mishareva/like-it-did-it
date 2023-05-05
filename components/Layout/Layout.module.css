@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-rows: 90px auto 36px;
+  grid-template-rows: 90px auto 70px;
   height: 100vh;
   position: relative;
 }
