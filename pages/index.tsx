@@ -1,8 +1,6 @@
-import { FC, useEffect } from "react";
+import { useEffect } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-
-import ListPage from "../components/ListPage/ListPage";
 
 const HomePage: NextPage = () => {
   const router = useRouter();
