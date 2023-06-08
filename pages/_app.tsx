@@ -31,7 +31,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Liked it - Did it</title>
+        <title>Liked it - Done it</title>
       </Head>
       <Layout>
         <Component {...pageProps} cards={cards} onAddCard={handleCards} />

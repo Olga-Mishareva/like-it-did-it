@@ -13,7 +13,7 @@ const CreatePage: NextPage<nextPageProp> = ({ onAddCard }) => {
 
   return (
     <FormPage
-      path={pathname.endsWith("liked") ? "liked" : "did"}
+      path={pathname.endsWith("liked") ? "liked" : "done"}
       onAddCard={onAddCard}
     />
   );
