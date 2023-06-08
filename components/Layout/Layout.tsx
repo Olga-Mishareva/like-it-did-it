@@ -2,7 +2,6 @@ import { FC } from "react";
 import Link from "next/link";
 
 import styles from "./Layout.module.css";
-// import { AppPropsWithLayout } from "../../_app";
 
 type LayoutProps = {
   children: React.ReactNode;

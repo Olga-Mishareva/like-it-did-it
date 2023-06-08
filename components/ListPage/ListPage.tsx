@@ -1,27 +1,40 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Link from "next/link";
+import { nanoid } from "nanoid";
 
 import { db } from "@/db";
 import styles from "./ListPage.module.css";
-import { Card } from "../../helpers/intefaces";
+import { ICard } from "../../helpers/intefaces";
 
-type pathProp = {
+type listPageProp = {
   path: string;
+  cards: ICard[];
 };
 
-const ListPage: FC<pathProp> = ({ path }) => {
+const ListPage: FC<listPageProp> = ({ path, cards }) => {
+  const [currentCards, setCurrentCards] = useState<ICard[]>([]);
+
+  useEffect(() => {
+    setCurrentCards(cards.filter((card) => card.status === path));
+  }, [cards]);
+
+  console.log(cards);
+
   return (
     <div className={styles.wrapper}>
+      <h1 className={styles.title}>
+        {path === "liked" ? "I've liked it" : "I've done it"}
+      </h1>
       <Link className={styles.link} href={`/create/${path}`}>
-        {path === "liked" ? "I liked it" : "I did it"}
+        +
       </Link>
       <ul className={styles.cardList}>
-        {db.map((item: Card, i) => (
-          <li className={styles.card} key={i}>
+        {currentCards.map((item: ICard) => (
+          <li className={styles.card} key={nanoid()}>
             <ol className={styles.eventList}>
               <p>{item.date}</p>
-              {item.dayEvents.map((dayEvent: String, i) => (
-                <li className="day-event" key={i}>
+              {item.dayEvents.map((dayEvent: String) => (
+                <li className="day-event" key={nanoid()}>
                   {dayEvent}
                 </li>
               ))}

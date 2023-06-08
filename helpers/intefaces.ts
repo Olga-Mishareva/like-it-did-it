@@ -1,4 +1,4 @@
-export interface Card {
+export interface ICard {
   date: String;
   status: String;
   dayEvents: String[];
