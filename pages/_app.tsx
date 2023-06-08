@@ -15,8 +15,17 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     defaultValue: [],
   });
 
-  function handleCards(card: ICard) {
-    setCards([card, ...cards]);
+  function handleCards(newCard: ICard) {
+    if (cards[0]) {
+      if (cards.filter((item) => item.date === newCard.date)) {
+        const refreshedCards = cards.map((item) => {
+          return item.date === newCard.date
+            ? { ...item, dayEvents: item.dayEvents.concat(newCard.dayEvents) }
+            : item;
+        });
+        setCards(refreshedCards);
+      } else setCards([newCard, ...cards]);
+    } else setCards([newCard]);
   }
 
   return (
