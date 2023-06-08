@@ -31,7 +31,7 @@ const FormPage: FC<formPageProp> = ({ path, onAddCard }) => {
         date: new Date().toLocaleString("de", {
           dateStyle: "full",
         }),
-        status: `${path === "liked" ? "liked" : "did"}`,
+        status: `${path === "liked" ? "liked" : "done"}`,
         dayEvents: dayEvents,
         userId: "12345",
         userName: "test",
@@ -64,7 +64,7 @@ const FormPage: FC<formPageProp> = ({ path, onAddCard }) => {
           name="dayevent"
           type="text"
           aria-label="Event"
-          placeholder={path === "liked" ? "I've liked..." : "I've did..."}
+          placeholder={path === "liked" ? "I've liked..." : "I've done..."}
           required
         />
         <div className={styles.buttonsContainer}>

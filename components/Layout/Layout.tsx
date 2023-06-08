@@ -19,7 +19,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
               <Link href="/list/liked">Liked it</Link>
             </li>
             <li>
-              <Link href="/list/did">Did it</Link>
+              <Link href="/list/done">Done it</Link>
             </li>
           </ul>
         </nav>

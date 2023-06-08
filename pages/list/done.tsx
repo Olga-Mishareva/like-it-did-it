@@ -13,7 +13,7 @@ const HomePage: NextPage<nextPageProp> = ({ cards }) => {
 
   return (
     <ListPage
-      path={pathname.endsWith("liked") ? "liked" : "did"}
+      path={pathname.endsWith("liked") ? "liked" : "done"}
       cards={cards}
     />
   );
