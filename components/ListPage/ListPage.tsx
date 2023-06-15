@@ -18,8 +18,6 @@ const ListPage: FC<listPageProp> = ({ path, cards }) => {
     setCurrentCards(cards.filter((card) => card.status === path));
   }, [cards]);
 
-  console.log(cards);
-
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.title}>

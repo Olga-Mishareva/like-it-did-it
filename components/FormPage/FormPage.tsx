@@ -12,7 +12,6 @@ type formPageProp = {
 
 const FormPage: FC<formPageProp> = ({ path, onAddCard }) => {
   const [dayEvents, setDayEvents] = useState<string[]>([]);
-  // const [card, setCard] = useState<ICard>();
 
   function handleDayEvents(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
