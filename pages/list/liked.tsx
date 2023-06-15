@@ -1,22 +1,15 @@
 import type { NextPage } from "next";
-import { usePathname } from "next/navigation";
 
 import ListPage from "../../components/ListPage/ListPage";
 import { ICard } from "../../helpers/intefaces";
 
 type nextPageProp = {
+  path: string;
   cards: ICard[];
 };
 
-const HomePage: NextPage<nextPageProp> = ({ cards }) => {
-  const pathname = usePathname();
-
-  return (
-    <ListPage
-      path={pathname.endsWith("liked") ? "liked" : "did"}
-      cards={cards}
-    />
-  );
+const HomePage: NextPage<nextPageProp> = ({ path, cards }) => {
+  return <ListPage path={path} cards={cards} />;
 };
 
 export default HomePage;
